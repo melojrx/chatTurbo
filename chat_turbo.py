@@ -6,9 +6,11 @@ from dotenv import load_dotenv
 emoji_robo = "🤖"
 emoji_user = "🙋"
 
-load_dotenv()  # carrega as variáveis de ambiente do arquivo .env
+#load_dotenv()  # carrega as variáveis de ambiente do arquivo .env
 
-openai.api_key = os.getenv('SENHA_OPEN_AI')
+#openai.api_key = os.getenv('SENHA_OPEN_AI')
+
+openai.api_key = st.secrets["chaveOpenAI"]
 
 st.title(f'{emoji_robo} Pergunte ao Jarvis')
 st.write('***')
